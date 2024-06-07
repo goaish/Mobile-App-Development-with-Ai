@@ -1,24 +1,16 @@
-// Global;
-// int count = 0;
-Function init(){
-  int count=0;
-  int countDown()
-  {
-    // local variable
-    // int count = 0;
-    count++;
-    return count; 
-  }
-  return countDown;
+Map<String,Function>  Math()
+{
+    int n = 1;
+    final Function f1 = ()=> n+10;
+    final Function f2 = ()=> n+20;
+    return {"f1":f1,"f2":f2};
 }
-// Closure -> function+lexical scope(variable)
+// closure=> function+lexical scope
 void main()
 {
-    Function fn = init();
-    print(fn());
-    print(fn());
-    print(fn());
-    print(fn());
-    print(fn());
-    print(fn());
+  Map<String,Function> map =  Math();
+  print(map);
+  // Bang Operator - ! not null (null check)
+  // print(map["f3"]!());
+  // closure
 }
